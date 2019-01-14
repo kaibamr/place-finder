@@ -147,7 +147,7 @@ class MapScreen extends Component {
           <Button
             large
             title="Wybierz typ miejsca i szukaj!"
-            backgroundColor="#009688"
+            backgroundColor="#009123"
             buttonStyle={styles.toolbarButton}
             icon={{ name: 'search' }}
             onPress={this._handlePressOpen}
