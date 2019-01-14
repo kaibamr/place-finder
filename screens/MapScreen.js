@@ -11,7 +11,7 @@ class MapScreen extends Component {
   static navigationOptions = {
     title: 'Mapa',
     tabBarIcon: ({tintColor}) => {
-      return <Icon name="my-location" size={30} color={tintColor}/>;
+      return <Icon name="map" size={30} color={tintColor}/>;
     }
   };
 
