@@ -7,7 +7,7 @@ class AuthorScreen extends Component {
     static navigationOptions = {
         title: 'Autor',
         tabBarIcon: ({tintColor}) => {
-          return <Icon name="ios-person" size={30} color={tintColor}/>;
+          return <Icon name="person" size={30} color={tintColor}/>;
         }
       };
 
