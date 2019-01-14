@@ -2,7 +2,8 @@ import { REHYDRATE } from 'redux-persist/constants';
 import _ from 'lodash';
 import {
   LIKE_PLACE,
-  CLEAR_LIKED_PLACES
+  CLEAR_LIKED_PLACES,
+  REMOVE_PLACE
 } from '../actions/types';
 
 export default function(state = [], action) {
@@ -15,6 +16,8 @@ export default function(state = [], action) {
       ], 'id');
     case CLEAR_LIKED_PLACES:
       return [];
+    case REMOVE_PLACE:
+      return _.remove(state, (currentPlace) => { return currentPlace.id !== action.payload});
     default:
       return state;
   }

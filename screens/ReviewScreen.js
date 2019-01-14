@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { ScrollView, Text, View, Linking, ActivityIndicator, Image } from 'react-native';
 import { Button, Card, Icon } from 'react-native-elements';
 import { MapView } from 'expo';
+import { removeLikedPlace } from '../actions';
 
 class ReviewScreen extends Component {
   state = {
@@ -39,6 +40,12 @@ class ReviewScreen extends Component {
       
         <Card title={place.name} key={place.id}>
           <View style={{ height: 200 }}>
+          <Button
+              title="Usuń"
+              backgroundColor="#990000"
+              buttonStyle={{ borderRadius: 10, marginBottom: 10 }}
+              onPress={() => this.removeFromList(place.id)}
+            ></Button>
             <MapView
                 style={{ flex: 1, marginBottom: 10}}
                 scrollEnabled={false}
@@ -72,6 +79,10 @@ class ReviewScreen extends Component {
     );
   }
 
+  removeFromList(placeId) {
+    this.props.removeLikedPlace(placeId);
+  }
+
   render() {
     return (
       <ScrollView>
@@ -102,5 +113,6 @@ function mapStateToProps({ likedPlaces, geo, places }) {
   return { likedPlaces, geo, places };
 }
 
-export default connect(mapStateToProps, null)(ReviewScreen);
+export default connect(mapStateToProps, { removeLikedPlace })(ReviewScreen);
+
 
