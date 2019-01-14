@@ -3,8 +3,7 @@ import {
   FETCH_PLACES_COMPLETE,
   LIKE_PLACE,
   CLEAR_LIKED_PLACES, FETCH_PLACES_START,
-  PLACE_CATEGORY,
-  // REMOVE_PLACE
+  PLACE_CATEGORY
 } from './types';
 
 export const fetchPlaces = (lat, long, type) => async (dispatch) => {
@@ -32,11 +31,3 @@ export const likePlace = (place) => {
 export const clearLikedPlaces = () => {
   return { type: CLEAR_LIKED_PLACES };
 };
-
-// zadanie trudne - dodaj X
-// export const removeLikedPlace = (placeId) => {
-//   return {
-//     type: REMOVE_PLACE,
-//     payload: placeId
-//   };
-// };

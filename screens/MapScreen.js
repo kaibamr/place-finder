@@ -236,13 +236,11 @@ const styles = {
   },
   toolbarRight: {
     flex: 30
-    // alignSel: 'flex-end',
   },
   toolbarMiddle: {
     flex: 40
   },
   toolbarLeft: {
-    // alignSelf: 'flex-start'
     flex: 30
   },
   toolbarButton: {

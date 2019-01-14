@@ -4,7 +4,6 @@ import _ from 'lodash';
 import { ScrollView, Text, View, Linking, ActivityIndicator, Image } from 'react-native';
 import { Button, Card, Icon } from 'react-native-elements';
 import { MapView } from 'expo';
-// import { removeLikedPlace } from '../actions';
 
 class ReviewScreen extends Component {
   state = {
@@ -40,9 +39,6 @@ class ReviewScreen extends Component {
       return (
       
         <Card title={place.name} key={place.id}>
-          {/* <Text onPress={() => this.removeFromList(place.id)}>
-            Usuń
-          </Text> */}
           <View style={{ height: 200 }}>
             <MapView
                 style={{ flex: 1, marginBottom: 10}}
@@ -66,10 +62,6 @@ class ReviewScreen extends Component {
       );
     });
   }
-
-  // removeFromList(placeId) {
-  //   this.props.removeLikedPlace(placeId);
-  // }
 
   renderNoLikedJobs() {
     return (
