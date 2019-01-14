@@ -9,6 +9,7 @@ import MapScreen from './screens/MapScreen';
 import DeckScreen from './screens/DeckScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import ReviewScreen from './screens/ReviewScreen';
+import AuthorScreen from './screens/AuthorScreen';
 
 export default class App extends React.Component {
   render() {
@@ -28,7 +29,8 @@ export default class App extends React.Component {
                 return <Icon name='thumb-up' size={30} color={tintColor} />;
               }
             })
-          }
+          },
+          Autorzy: { screen: AuthorScreen }
         }, {
           tabBarLabel: { fontSize: 12 }
         })
