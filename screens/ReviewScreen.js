@@ -24,8 +24,7 @@ class ReviewScreen extends Component {
   }
 
   renderLikedJobs() {
-    const sortedPlaces = _.sortBy(this.props.likedPlaces, o => o.rating ? o.rating : 0).reverse();
-    return sortedPlaces.map(place => {
+    return this.props.likedPlaces.map(place => {
       const latLng = `${place.geometry.location.lat},${place.geometry.location.lng}`;
       const url = `maps:0,0q=${latLng}`;
 
