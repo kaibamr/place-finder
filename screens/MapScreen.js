@@ -100,7 +100,7 @@ class MapScreen extends Component {
       case 'supermarket':
         return 'Supermarkety'
       case 'bank':
-        return 'BANG'
+        return 'Bank'
     }
   }
 
@@ -204,6 +204,7 @@ class MapScreen extends Component {
             <Picker.Item label="Supermarket" value="supermarket" />
             <Picker.Item label="Bank" value="bank" />
             <Picker.Item label="Centrum handlowe" value="shopping_mall" />
+            <Picker.Item label="Bank" value="bank" />
           </Picker>
         </Animated.View>
       </View>
